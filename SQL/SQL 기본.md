@@ -1,14 +1,24 @@
-# SQL 기본
+# SQL 기본문법
 
 ---
 
-> <기본 문법, SELECTing single columns>
+> 참고자료 : campus.datacamp.com
+>
+> ---
+
+# <u>**1. Selecting columns**</u>
+
+> ---
+>
+> #### SELECTing single columns
 >
 > #Select the `title` column from the `films` table.
 
 ```SELECT title AS films;```
 
 ---
+
+
 
 SQL은 구조화된 쿼리 언어로 관계형 데이터베이스라고 불린다. 
 
@@ -22,7 +32,7 @@ SQL은 데이터베이스를 만들고 수정할 수 있다.
 
 ---
 
-<기본 문법, SELECTing multiple columns>
+#### SELECTing multiple columns
 
 #people테이블에서 두 개 컬럼(name, birthdate) 가져오기
 
@@ -38,6 +48,37 @@ SQL은 데이터베이스를 만들고 수정할 수 있다.
 
 ---
 
+#### SELECT DISTINCT
 
+DISTINCT key로 열에서 고유값을 가져올 수 있다.
 
-<기본 문법, SELECT DISTINCT>
+#films 테이블에서 country를 하나씩만 가져오기
+
+``` SELECT DISTINCT country FROM films; ```
+
+----
+
+#### Learning to COUNT
+
+하나 이상의 열에서 행의 수를 알 수 있다.
+
+#reviews 테이블의 행의 수를 알아보자.
+
+``` SELECT COUNT(*) FROM reviews;```
+
+---
+
+#### Practice with COUNT
+
+#people 테이블의 행의 수
+
+``` SELECT COUNT(*) FROM people; ```
+
+#결측치없는 birthdates의 수
+
+``` SELECT COUNT(birthdate) FROM people;```
+
+#birth date 고유값 가져오기
+
+```SELECT COUNT(DISTINCT birthdate) FROM people;```
+
