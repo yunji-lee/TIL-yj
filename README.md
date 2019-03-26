@@ -12,7 +12,7 @@
 * [Hadoop](#hadoop)
 * [Git](#git)
 * [Jekyll](#jekyll)
-* SQL
+* [SQL](#SQL)
 
 ---
 ## Python
